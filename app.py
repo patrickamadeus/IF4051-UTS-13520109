@@ -58,8 +58,3 @@ def get_balance(user_id):
         return jsonify({'balance': user.balance})
     else:
         return jsonify({'error': 'User not found'}), 404
-
-
-if __name__ == '__main__':
-    # app run in port 80
-    app.run(port=8080)
