@@ -5,6 +5,10 @@ from datetime import datetime
 from dotenv import dotenv_values
 
 app = Flask(__name__)
+
+# TODO: Set the DATABASE_URL environment variable, following structure of this table
+# users (id, name, balance, pin)
+# transactions (id, user_id, created_at, type, amount)
 app.config["SQLALCHEMY_DATABASE_URI"] = dotenv_values(".env").get("DATABASE_URL")
 db = SQLAlchemy(app)
 

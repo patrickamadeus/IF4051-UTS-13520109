@@ -3,11 +3,12 @@ import requests
 import pandas as pd
 
 # Replace with your actual API endpoint URLs
-TRANSACTION_API_URL = "http://192.168.1.7:3000/transactions"
-NAME_API_URL = "http://192.168.1.7:3000/get_user_name"
-BALANCE_API_URL = "http://192.168.1.7:3000/get_balance"
-LOGIN_API_URL = "http://192.168.1.7:3000/login"
-TOP_UP_URL = "http://192.168.1.7:3000/update_balance"
+HOST = "http://192.168.1.9:3000"
+TRANSACTION_API_URL = HOST+"/transactions"
+NAME_API_URL = HOST+"/get_user_name"
+BALANCE_API_URL = HOST+"/get_balance"
+LOGIN_API_URL = HOST+"/login"
+TOP_UP_URL = HOST+"/update_balance"
 
 
 def get_transactions(user_id):
